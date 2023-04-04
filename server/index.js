@@ -32,3 +32,4 @@ app.put("/", async (req, res) => {
   await notes.updateOne({ title: "note1" }, { text: req.body.putNote });
   res.send({ status: "done" });
 });
+module.exports = app
