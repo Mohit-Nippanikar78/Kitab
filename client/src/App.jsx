@@ -4,7 +4,8 @@ import "./App.css";
 import Notepad from "./components/Notepad";
 import Editor from "./components/Editor";
 import EditorStatus from "./components/EditorStatus";
-import LoadingBar from 'react-top-loading-bar'
+import LoadingBar from "react-top-loading-bar";
+import Sidebar from "./Sidebar";
 
 function App() {
   const [editor, setEditor] = useState(false);
@@ -12,13 +13,18 @@ function App() {
   const [progress, setProgress] = useState(0);
 
   return (
-    <div className="min-h-screen min-w-screen flex justify-center items-start pt-10" style={{ background: "rgba(0,0,0,0.1)" }}>
+    <div className="dark dark:bg-blue-300 min-h-screen min-w-screen flex justify-center items-start ">
       <LoadingBar
-        color='#f11946'
+        color="#f11946"
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
       />
-      <Notepad editor={editor} setEditorPer={setEditorPer} />
+      <div className="flex w-full min-h-screen">
+        <Sidebar />
+
+        <Notepad editor={editor} setEditorPer={setEditorPer} />
+      </div>
+
       {editorPer && (
         <Editor
           setEditorPer={setEditorPer}

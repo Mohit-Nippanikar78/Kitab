@@ -18,16 +18,16 @@ const uploadData =()=>{
 
 
  return (
-    <div class="w-2/3 mb-4 border border-gray-200 rounded-lg bg-gray-50 :bg-gray-700 :border-gray-600">
-      <div class="flex items-center justify-between px-3 py-2 border-b :border-gray-600">
-        <div class="flex flex-wrap items-center divide-gray-200 sm:divide-x :divide-gray-600">
+    <div class="w-full min-h-screen border border-gray-200  bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+      <div class="flex items-center justify-between px-3 py-2 border-b dark:border-gray-600">
+        <div class="flex flex-wrap items-center divide-gray-200 sm:divide-x dark:divide-gray-600">
           <div class="flex items-center space-x-1 sm:pr-4">
             <button
               onClick={() => {
                 setEditorPer(true);
               }}
               type="button"
-              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 :text-gray-400 :hover:text-white :hover:bg-gray-600"
+              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
             >
               <svg
                 fill="none"
@@ -48,7 +48,7 @@ const uploadData =()=>{
             </button>
             <button
               type="button"
-              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 :text-gray-400 :hover:text-white :hover:bg-gray-600"
+              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
             >
               <svg
                 aria-hidden="true"
@@ -67,7 +67,7 @@ const uploadData =()=>{
             </button>
             <button
               type="button"
-              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 :text-gray-400 :hover:text-white :hover:bg-gray-600"
+              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
             >
               <svg
                 aria-hidden="true"
@@ -86,7 +86,7 @@ const uploadData =()=>{
             </button>
             <button
               type="button"
-              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 :text-gray-400 :hover:text-white :hover:bg-gray-600"
+              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
             >
               <svg
                 aria-hidden="true"
@@ -105,7 +105,7 @@ const uploadData =()=>{
             </button>
             <button
               type="button"
-              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 :text-gray-400 :hover:text-white :hover:bg-gray-600"
+              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
             >
               <svg
                 aria-hidden="true"
@@ -126,7 +126,7 @@ const uploadData =()=>{
           <div class="flex flex-wrap items-center space-x-1 sm:pl-4">
             <button
               type="button"
-              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 :text-gray-400 :hover:text-white :hover:bg-gray-600"
+              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
             >
               <svg
                 aria-hidden="true"
@@ -145,7 +145,7 @@ const uploadData =()=>{
             </button>
             <button
               type="button"
-              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 :text-gray-400 :hover:text-white :hover:bg-gray-600"
+              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
             >
               <svg
                 aria-hidden="true"
@@ -164,7 +164,7 @@ const uploadData =()=>{
             </button>
             <button
               type="button"
-              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 :text-gray-400 :hover:text-white :hover:bg-gray-600"
+              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
             >
               <svg
                 aria-hidden="true"
@@ -183,7 +183,7 @@ const uploadData =()=>{
             </button>
             <button
               type="button"
-              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 :text-gray-400 :hover:text-white :hover:bg-gray-600"
+              class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
             >
               <svg
                 aria-hidden="true"
@@ -205,7 +205,7 @@ const uploadData =()=>{
         <button
           type="button"
           data-tooltip-target="tooltip-fullscreen"
-          class="p-2 text-gray-500 rounded cursor-pointer sm:ml-auto hover:text-gray-900 hover:bg-gray-100 :text-gray-400 :hover:text-white :hover:bg-gray-600"
+          class="p-2 text-gray-500 rounded cursor-pointer sm:ml-auto hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
         >
           <svg
             aria-hidden="true"
@@ -226,13 +226,13 @@ const uploadData =()=>{
         <div
           id="tooltip-fullscreen"
           role="tooltip"
-          class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip :bg-gray-700"
+          class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
         >
           Show full screen
           <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
       </div>
-      <div class="px-4 py-2 bg-white rounded-b-lg :bg-gray-800">
+      <div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
         <label for="editor" class="sr-only">
           Publish post
         </label>
@@ -240,7 +240,7 @@ const uploadData =()=>{
           disabled={!editor}
           id="editor"
           rows="8"
-          class="block outline-0 min-h-[70vh] w-full px-0 text-sm text-gray-800 bg-white border-0 :bg-gray-800  :text-white :placeholder-gray-400"
+          class="block outline-0 min-h-[70vh] w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800  dark:text-white dark:placeholder-gray-400"
           placeholder="Write an article..."
           ref={noteArea}
           required
