@@ -2,11 +2,12 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const notes = require("./models/notes");
+var bodyParser = require('body-parser')
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-
+app.use(bodyParser.urlencoded({ extended: true }));
 mongoose
   .connect(
     "mongodb+srv://MohitNippanikar:mhtnipp77@cluster0.mwqucgz.mongodb.net/Notepad?retryWrites=true&w=majority" ||
