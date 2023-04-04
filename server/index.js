@@ -16,7 +16,7 @@ mongoose
   )
   .then(() => {
     app.listen(process.env.PORT || 3002, () => {
-      res.send("Server running on 3002");
+      console.log("Server running on 3002");
     });
   })
   .catch((err) => {
