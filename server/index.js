@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const notes = require("./models/notes");
-var bodyParser = require('body-parser')
+var bodyParser = require("body-parser");
 const app = express();
 
 app.use(cors());
@@ -16,20 +16,19 @@ mongoose
   )
   .then(() => {
     app.listen(process.env.PORT || 3002, () => {
-      console.log("Server running on 3002");
+      res.send("Server running on 3002");
     });
   })
   .catch((err) => {
-    console.log(err);
+    res.send(err);
   });
 
 app.get("/", async (req, res) => {
   let resNote = await notes.findOne({ title: "note1" });
-  console.log(resNote)
+
   res.send({ resNote: resNote.text });
 });
 app.put("/", async (req, res) => {
-    console.log(req.body)
-  await notes.updateOne({title:"note1"},{text:req.body.putNote})
-  res.send({status:"done"});
+  await notes.updateOne({ title: "note1" }, { text: req.body.putNote });
+  res.send({ status: "done" });
 });
