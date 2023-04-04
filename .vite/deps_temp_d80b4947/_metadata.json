@@ -1,0 +1,29 @@
+{
+  "hash": "d553b180",
+  "browserHash": "ec676565",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "a5ead9aa",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "47ecc062",
+      "needsInterop": true
+    },
+    "react-outside-click-handler": {
+      "src": "../../node_modules/react-outside-click-handler/index.js",
+      "file": "react-outside-click-handler.js",
+      "fileHash": "7973d85c",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-WCYUDUTY": {
+      "file": "chunk-WCYUDUTY.js"
+    }
+  }
+}
