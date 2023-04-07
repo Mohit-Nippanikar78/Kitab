@@ -22,14 +22,14 @@ mongoose
   .catch((err) => {
     res.send(err);
   });
-
+app.use("/note",require("./routes/notesR.js"))
 app.get("/", async (req, res) => {
-  let resNote = await notes.findOne({ title: "note1" });
+  //let resNote = await notes.findOne({ title: "note1" });
 
   res.send({ resNote: resNote.text });
 });
 app.put("/", async (req, res) => {
-  await notes.updateOne({ title: "note1" }, { text: req.body.putNote });
+ // await notes.updateOne({ title: " }, { text: req.body.putNote });
   res.send({ status: "done" });
 });
 module.exports = app;

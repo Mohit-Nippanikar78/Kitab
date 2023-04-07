@@ -24,7 +24,7 @@ const Editor = ({ setEditorPer, setEditor, editorPer }) => {
             if (editorPer) setEditorPer(false);
           }}
         >
-          <div class="relative  rounded-lg shadow dark:bg-gray-700">
+          <div class="relative  rounded-lg shadow   ">
             <label
               for="input-group-1"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
