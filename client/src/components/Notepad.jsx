@@ -44,11 +44,16 @@ const Notepad = ({ editor, setEditorPer, curNoteId, setProgress }) => {
   return (
     <div class="w-full min-h-screen border border-gray-200  bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
       <div class="flex items-center justify-between px-3 py-2 border-b dark:border-gray-600">
-        <BarIcons setEditorPer={setEditorPer} curNoteId={curNoteId} />
+        <BarIcons
+          setEditorPer={setEditorPer}
+          curNoteId={curNoteId}
+          editor={editor}
+        />
         <div class="flex flex-wrap items-center space-x-1 sm:pl-4 flex-1 mr-2">
           <input
             type="text"
             ref={noteTitleref}
+            disabled={!editor}
             class="outline-0  p-2  flex-1 rounded hover:cursor-text sm:ml-auto text-gray-900 bg-gray-100 dark:text-gray-400 dark:text-white dark:bg-gray-600"
             onChange={(e) => {
               textAreaChange();
@@ -105,7 +110,7 @@ const Notepad = ({ editor, setEditorPer, curNoteId, setProgress }) => {
     </div>
   );
 };
-const BarIcons = ({ setEditorPer, curNoteId }) => {
+const BarIcons = ({ setEditorPer, curNoteId ,editor}) => {
   const deleteNote = () => {
     axios
       .delete(serverUrl + `/note/noteid/${curNoteId}`)
@@ -120,7 +125,7 @@ const BarIcons = ({ setEditorPer, curNoteId }) => {
               setEditorPer(true);
             }}
             type="button"
-            class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+            class="p-2  text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
           >
             <svg
               fill="none"
@@ -144,7 +149,8 @@ const BarIcons = ({ setEditorPer, curNoteId }) => {
               deleteNote();
             }}
             type="button"
-            class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+            disabled={!editor}
+            class="disabled:opacity-50   p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 disabled:dark:hover:bg-none"
           >
             <svg
               class="w-5 h-5"
