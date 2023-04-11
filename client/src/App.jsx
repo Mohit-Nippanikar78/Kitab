@@ -21,7 +21,7 @@ function App() {
         onLoaderFinished={() => setProgress(0)}
       />
       <div className="flex w-full min-h-screen">
-        <Sidebar setCurNoteId={setCurNoteId} />
+        <Sidebar setCurNoteId={setCurNoteId} editor={editor} />
 
         <Notepad
           editor={editor}

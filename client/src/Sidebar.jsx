@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { serverUrl } from "./utils";
 
-const Sidebar = ({ setCurNoteId }) => {
+const Sidebar = ({ setCurNoteId, editor }) => {
   const [notesBar, setNotesBar] = useState([]);
   useEffect(() => {
     axios.get(serverUrl + "/note/notes").then((res) => {
@@ -28,7 +28,7 @@ const Sidebar = ({ setCurNoteId }) => {
           <ul class=" font-medium">
             <li
               onClick={() => {
-                createNote();
+                editor && createNote();
               }}
             >
               <div class="cursor-pointer flex items-center my-1.5 p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
